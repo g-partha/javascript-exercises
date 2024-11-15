@@ -8,19 +8,15 @@ const subtract = function(number1, number2) {
 };
 
 const sum = function(numberArray) {
-	let sumValue = 0;
-  for(let i = 0; i < numberArray.length; i++){
-    sumValue += numberArray[i];
-  }
-  return sumValue;
+return numberArray.reduce((result, currentValue) => {
+  return result + currentValue;
+}, 0);
 };
 
 const multiply = function(numberArray) {
-	let multipliedValue = 1;
-  for(let i = 0; i < numberArray.length; i++){
-    multipliedValue *= numberArray[i];
-  }
-  return multipliedValue;
+  return numberArray.reduce((result, currentValue) => {
+    return result * currentValue;
+  }, 1);
 };
 
 const power = function(number1, number2) {

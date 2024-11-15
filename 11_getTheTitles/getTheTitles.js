@@ -1,9 +1,7 @@
 const getTheTitles = function(books) {
-    const titleArray = [];
-    for(i = 0; i < books.length; i++){
-        titleArray.push(books[i].title);
-    }
-    return titleArray;
+return books.map((item) => {
+    return item.title;
+});
 };
 
 // Do not edit below this line
